@@ -14,6 +14,13 @@
 # limitations under the License.
 #
 
+include $(CLEAR_VARS)
+LOCAL_MODULE       := init.led.sh
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := etc/init.led.sh
+include $(BUILD_PREBUILT)
+
 ifneq ($(filter jewel evita ville fireball,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)

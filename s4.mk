@@ -38,6 +38,7 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    init.led.sh \
     init.qcom.usb.rc \
     init.qcom.rc \
     ueventd.qcom.rc
