@@ -14,13 +14,6 @@
 # limitations under the License.
 #
 
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.led.sh
-LOCAL_MODULE_TAGS  := optional eng
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init.led.sh
-include $(BUILD_PREBUILT)
-
 ifneq ($(filter jewel evita ville fireball,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
@@ -60,5 +53,4 @@ ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_Q6_SYMLINKS)
 $(shell mkdir -p $(TARGET_OUT)/etc/firmware/wlan/prima; \
     ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
 	    $(TARGET_OUT)/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
-
 endif
